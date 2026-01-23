@@ -16,14 +16,14 @@ func main() {
 
   // define web server
   server := &http.Server{
-	Addr: ":" + webPort,
-	Handler: app.routes(),
+	  Addr: ":" + webPort,
+	  Handler: app.routes(),
   }
 
   // start web server
   err := server.ListenAndServe()
   if err != nil {
-	log.Fatal(err)
+	  log.Fatal(err)
   }
 
 }

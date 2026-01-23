@@ -13,8 +13,8 @@ type jsonResponse struct {
 
 func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
   payload := jsonResponse{
-	Error: false,
-	Message: "Hit the broker",
+	  Error: false,
+	  Message: "Hit the broker",
   }
 
   out, _ := json.MarshalIndent(payload, "", "   ")
@@ -22,5 +22,5 @@ func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
   w.WriteHeader(http.StatusOK)
   w.Write(out)
 
-  
+
 }
